@@ -1,43 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html{
     font-size: 18px;
     font-weight: 700;
     font-family: "Ubuntu", sans-serif;
 }
 
+body{
+    padding-top: 60px;
+    height: auto;
+}
+
+main{
+    height: 100vh;
+    background-color:  #f0ececd1;
+}
+
 #productContainer{
    display: flex;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    flex-direction: column;
    align-items: center;
+   background-color: #f0ececd1 ;
    justify-items: center;
    justify-content: center;
-    width: 100%;
-    margin: auto;
+   margin: auto;
+   height: auto;
     padding: 40px;
     gap: 20px;
 }
 .tarjeta-producto{
-    
     display: flex;
     justify-content: space-between;
+    background-color: #ffffffd1;
     align-items: left;
     width: 500px;
     border: solid rgba(128, 128, 128, 0.164);
     border-radius: 8px;
-    padding: 20px;
-    
-    
+    padding: 15px;
 }
 
 .tarjeta-producto img{
     height: 150px;
-    border-radius: 8px;
-    padding-right: 10px;
-    
+    border-radius: 4%;
 }
-
 .tarjeta-producto h3{
     font-size: 20PX;
 }
@@ -45,10 +57,25 @@ html{
     font-size: 16PX;
 }
 
-
-
 #totales{
+    
     text-align: center;
+    padding: 10px;
+    background-color: #f0ececd1;
+    a{
+        text-decoration: none;
+        color: rgb(233, 161, 6);
+    }
+}
+
+#cart-vacio{
+    text-align: center;
+    padding: 10px;
+    background-color: #f0ececd1;
+    a{
+        text-decoration: none;
+        color: rgb(233, 161, 6);
+    }
 }
 
 .btn-add{
@@ -62,10 +89,29 @@ html{
 }
 
 .btn-buy{
-    height: 50px;
-    width: 140px;
+    height: 40px;
+    width: 120px;
     border-radius: 10px;
     border: solid  rgba(232, 200, 20, 0.894);
     background-color: rgba(232, 200, 20, 0.894);
     color: black;
+    cursor:pointer;
+    
+}
+
+.escondido{
+    display: none;
+}
+
+
+#footer{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    justify-self:flex-end;
+    align-items: center;
+    color: white;
+    background-color: rgb(23, 23, 23);
 }

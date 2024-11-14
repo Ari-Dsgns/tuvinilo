@@ -9,6 +9,7 @@
 html{
   font-family: "Ubuntu", sans-serif;
 }
+
 body {
   background-color: #f4f2f2d1;
   font-family: "Ubuntu", sans-serif;
@@ -16,9 +17,8 @@ body {
   color: white;
   padding-top: 40px;
   
+  
 }
-
- 
 
 #menu{
   background-color: #22222321;
@@ -33,25 +33,6 @@ body {
 }
 
 
-#div1{
-  
-  margin: 20px; 
-  margin-top: 4px;
-  width: 95%;
-  height: 480px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  justify-self: center;
-  align-items: center;
-  background-position: center;
-  background-image: url(./img/stephen-harlan-TUCVPkK3uwo-unsplash.jpg);
-  background-size: cover;
-  border-radius: 10px;
-  color: rgb(255, 254, 254);
-  
-}
 
 #div2{
   margin: 20px;
@@ -83,15 +64,13 @@ body {
   justify-content: center;
   align-items: center;
   background-position: center;
-  background-image: url(./img/stephen-harlan-TUCVPkK3uwo-unsplash.jpg);
+  background-image: url(../img/stephen-harlan-TUCVPkK3uwo-unsplash.jpg);
   background-size: cover;
   border-radius: 10px;
   color: rgb(255, 254, 254);
 }
 
 #footer{
-  
-
   display: flex;
   height: 200px;
   width: 100%;
@@ -100,14 +79,11 @@ body {
   justify-self: center;
   align-items: center;
   color: white;
-  
-  
   background-color: rgb(23, 23, 23);
-
 }
 
 #cuenta-carrito{
-  background-color: rgb(193, 92, 92);
+  background-color: rgba(232, 200, 20, 0.894);
   border-radius: 100%;
   display: inline-block;
   width: 20px;
@@ -117,12 +93,9 @@ body {
   position: absolute;
   font-weight: 500;
   font-size: 12px;
-  
-
 } 
 
 #productos-carrito{
-
   display:flex;
   justify-content: right;
   align-items: center;
@@ -131,17 +104,6 @@ body {
   border: solid black;
 }
 
-#cards {
-    opacity: 90%;
-    box-shadow: 0px 0px 10px  #00154d95; }
-    #cards a {
-      background-color: #ecdb26c7; 
-      border: #6b0096fb; }
-      #cards a:hover {
-        background-color: #ecdb26f6; }
-  
-  #cards:hover {
-    box-shadow: 1px 1px 120px  #8a8a8aad;    box-shadow: 0px 0px 3px  #00154d;
-    opacity: 100%; 
-    border:20px solid rgb(13, 12, 12);
-  }
+.escondido{
+  display: none;
+}
