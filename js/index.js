@@ -2,7 +2,7 @@ const containerCards= document.getElementById("productContainer");
 
 function crearCardsInicio(){
 
-    fetch("../data.json").then(response=>response.json())
+    fetch("./data.json").then(response=>response.json())
 // .then((data)=>console.log(data))
 .then((data)=>{
     data.forEach((vinilo)=>{
