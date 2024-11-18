@@ -16,7 +16,7 @@ function crearCardsInicio(){
                 <h4>${vinilo.subtitle}</h4>
                 <div id="precio-boton">
                     <p id="precio" >${vinilo.price}€</p>
-                    <button id="btn">Agregar</button>
+                    <button id="btn">Agregar <i class="bi bi-bag"></i></button>
                 </div>
             </div>
         `

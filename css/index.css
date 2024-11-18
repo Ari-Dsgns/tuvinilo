@@ -11,11 +11,15 @@ html{
 }
 
 body {
-    background-color: #f4f2f2d1;
+    /* background-color: #f4f2f2d1; */
+    background-color: #0f0f0fd1 ;
     font-family: "Ubuntu", sans-serif;
     /* background-color: #c5c3ccd1; */
     color: white;
-    padding-top: 40px;
+    padding-top: 40px; 
+    font-family: "Ubuntu", sans-serif;
+    
+    
 }
 
 #footer{
@@ -38,38 +42,48 @@ body {
     /* max-width: 800px; */
     margin: auto;
     gap: 40px;
-    background-color:#faf8f8d1;
+    /* background-color:#faf8f8d1; */
+    background-color: rgb(244, 244, 244);
     padding: 40px;
 }
 
 .tarjeta-producto{
     max-width: 300px;
-    max-height: 800px;
-    border: solid 6px#faf8f8d1;
+    max-height: 700px;
+    border: solid 10px  rgb(244, 244, 244);
     border-radius: 10px;
-    background-color:#faf8f8d1;
+    /* background-color:#faf8f8d1; */
+    background-color: rgb(244, 244, 244);
     /* box-shadow: 3 3 5px rgba(50, 49, 49, 0.298); */
-    transition: 800ms;
+    transition: 1000ms;
+    color: rgb(43, 41, 41);
 }
 
 .tarjeta-producto:hover{
-    border: solid 2px#faf8f8d1;
+    border: solid 4px   rgb(244, 244, 244);
+    
     /* translate: 0 -16px;  */
     /* border: solid  4px #faf8f8d1; */
-    /* box-shadow: 0px 0px 50px rgba(125, 122, 122, 0.373); */
+    /* box-shadow: 0px 0px 50x rgba(50, 49, 49, 0.757); */
     #btn{
         display: block;
     }
-    box-shadow: 2px 2px 50px  rgba(83, 81, 81, 0);
+    
+    
 }
 
 .tarjeta-producto img{
     width: 100%;
     opacity:100%;
     aspect-ratio: 1;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    /* border-top-right-radius: 8px;
+    border-top-left-radius: 8px; */
+    border-radius: 0px;
 }
+
+
+
+
 
 .tarjeta-producto div{
     display: flex;
@@ -95,10 +109,13 @@ body {
     height: 40px;
     width: 120px;
     border-radius: 6px;
-    border: solid  rgba(20, 207, 232, 0);
+    border: solid  rgba(255, 255, 255, 0.822) 2px;
     background-color: rgba(248, 217, 43, 0.788);
     display: none;
 }
+
+
+
 
 .tarjeta-producto p{
     font-size: large;
