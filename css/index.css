@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 
 *{
     margin: 0;
@@ -12,13 +13,70 @@ body {
     background-color: rgb(248, 246, 246) ;
     color: white;
     padding-top: 40px; 
-    font-family: "Ubuntu", sans-serif;
 
 }
 
 main{
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     background-color: rgb(248, 246, 246) ;
+}
+
+@media (max-width:1439px){
+
+    .seccionCategorias{
+
+        .intro-image-box{
+            display: flex;
+            width: 280px;
+            height: 160px;
+            overflow: hidden;
+        }
+
+
+        .intro-image-box img{
+        
+            transform: scale(1.0);
+            transition: transform 0.5s;
+        }
+        .intro-image-box img:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .cardCateg{
+        #arrow-position{
+            display: none;
+            color: white;
+            position: absolute;
+            align-self:self-end;
+            padding-right: 12px;
+            padding-top: 122px;
+        }
+    }
+
+
+
+    .tarjeta-producto{
+        width: 200px;
+        height: 380px;
+        border: solid 8px  rgba(219, 219, 219, 0);
+        background-color: rgb(248, 246, 246) ;
+        transition: 500ms;
+        color: rgb(43, 41, 41);
+        overflow: hidden;
+        opacity: 85%;
+        
+    }
+
+}
+
+
+
+@media (max-width:1196px){
+    .seccionCategorias{
+        gap:50px
+    }
+
 }
 
 .seccionCategorias{
@@ -30,8 +88,8 @@ main{
     margin: auto;
     background-color: rgb(248, 246, 246);
     justify-content: space-evenly;
-    gap: 10px;
-    padding: 60px;
+    gap: 5px;
+    padding: 30px;
 
 }
 
@@ -130,6 +188,9 @@ main{
     opacity: 100%;
     #btn{
         display: block;
+        
+
+
     }
     
     
@@ -167,6 +228,7 @@ main{
     color: white;
     display: none;
     
+    
 }
 
 #btn:active{
@@ -177,6 +239,7 @@ main{
 #btn:hover{
     background-color:rgba(44, 44, 44, 0.894) ;
     color: rgb(255, 255, 255);
+    
     
     
 
