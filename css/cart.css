@@ -32,10 +32,9 @@ body{
    align-items: center;
    /* background-color: #f0ececd1 ; */
    background-color: #fafafad1 ;
-   justify-items: center;
+   justify-items: center; 
    justify-content: center;
    padding: 40px;
-   gap: 0px;
    border: solid 0px grey;
 }
 .tarjeta-producto{
@@ -43,7 +42,7 @@ body{
     justify-content: space-between;
     background-color: #e8e2e2d1;
     align-items: left;
-    max-width: 450px;
+    width: 450px;
     gap: 40px;
     height: 150px;
     border: solid rgba(128, 128, 128, 0.164);
@@ -114,11 +113,11 @@ body{
 
 .btn-buy{
     height: 40px;
-    width: 120px;
-    border-radius: 10px;
-    border: solid  rgba(232, 200, 20, 0.894);
-    background-color: rgba(232, 200, 20, 0.894);
-    color: black;
+    width: 220px;
+    
+    border: none;
+    background-color: rgba(18, 18, 17, 0.894);
+    color: rgb(247, 243, 243);
     cursor:pointer;
     
 }

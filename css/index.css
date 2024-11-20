@@ -6,18 +6,78 @@
     box-sizing: border-box;
 }
 
-html{
-    font-family: "Ubuntu", sans-serif;
-}
+
 
 body {
-    /* background-color: #f4f2f2d1; */
-    background-color: #0f0f0fd1 ;
-    font-family: "Ubuntu", sans-serif;
-    /* background-color: #c5c3ccd1; */
+    background-color: rgb(248, 246, 246) ;
     color: white;
     padding-top: 40px; 
     font-family: "Ubuntu", sans-serif;
+
+}
+
+main{
+    font-family: "Ubuntu", sans-serif;
+    background-color: rgb(248, 246, 246) ;
+}
+
+.seccionCategorias{
+
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: rgb(248, 246, 246);
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 60px;
+
+}
+
+
+.intro-image-box{
+    display: flex;
+    width: 340px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.intro-image-box img{
+    
+    transform: scale(1.0);
+    transition: transform 0.5s;
+}
+.intro-image-box img:hover {
+    transform: scale(1.05);
+}
+
+.cardCateg{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    gap: 20px;
+    h4{
+        font-weight: 500;
+    }
+}
+
+.cardCateg:hover{
+    #arrow-position{
+        display: block;
+        
+    }
+}
+
+#arrow-position{
+    display: none;
+    color: white;
+    position: absolute;
+    align-self:self-end;
+    padding-right: 18px;
+    padding-top: 172px;
+    
+    
     
     
 }
@@ -32,39 +92,42 @@ body {
     align-items: center;
     color: white;
     background-color: rgb(23, 23, 23);
-  }
+    font-family: "Ubuntu", sans-serif;
+}
 
-  
+#separador{
+    display: flex;
+    padding-left: 80px;
+    padding-top: 60px;
+    background-color: rgb(248, 246, 246) ;
+    
+}
+
 #productContainer{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* max-width: 800px; */
     margin: auto;
-    gap: 40px;
-    /* background-color:#faf8f8d1; */
-    background-color: rgb(244, 244, 244);
+    gap: 20px;
+    background-color: rgb(248, 246, 246) ;
     padding: 40px;
 }
 
 .tarjeta-producto{
-    max-width: 300px;
-    max-height: 700px;
-    border: solid 10px  rgb(244, 244, 244);
-    border-radius: 10px;
-    /* background-color:#faf8f8d1; */
-    background-color: rgb(244, 244, 244);
-    /* box-shadow: 3 3 5px rgba(50, 49, 49, 0.298); */
-    transition: 1000ms;
+    max-width: 240px;
+    height: 420px;
+    border: solid 8px  rgba(219, 219, 219, 0);
+    background-color: rgb(248, 246, 246) ;
+    transition: 500ms;
     color: rgb(43, 41, 41);
+    overflow: hidden;
+    opacity: 85%;
+    
 }
 
 .tarjeta-producto:hover{
-    border: solid 4px   rgb(244, 244, 244);
-    
-    /* translate: 0 -16px;  */
-    /* border: solid  4px #faf8f8d1; */
-    /* box-shadow: 0px 0px 50x rgba(50, 49, 49, 0.757); */
+    border: solid 4px  rgba(209, 208, 208, 0);
+    opacity: 100%;
     #btn{
         display: block;
     }
@@ -72,54 +135,138 @@ body {
     
 }
 
+.tarjeta-producto:active{
+    -webkit-animation: heartbeat 0.8s ease-in-out infinite both;
+	        animation: heartbeat 0.8s ease-in-out infinite both;
+}
+
 .tarjeta-producto img{
     width: 100%;
     opacity:100%;
     aspect-ratio: 1;
-    /* border-top-right-radius: 8px;
-    border-top-left-radius: 8px; */
     border-radius: 0px;
 }
-
-
-
-
 
 .tarjeta-producto div{
     display: flex;
     flex-direction: column;
-    /* margin:10px; */
-    gap: 4px;
-    padding: 10px;
+    padding-top: 4px;
+    padding-left: 4px;
+    h6{
+        color: rgb(77, 73, 73);
+    }
+    
 }
 
-.tarjeta-producto #precio-boton{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: auto;
-    /* align-items: baseline; */
-     /* #precio{
-        justify-self: flex-start;
-    }  */
-}
-
-.tarjeta-producto #btn{
+#btn{
     opacity: 100%;
     height: 40px;
-    width: 120px;
-    border-radius: 6px;
-    border: solid  rgba(255, 255, 255, 0.822) 2px;
-    background-color: rgba(248, 217, 43, 0.788);
+    width: 100%;
+    border: none;
+    background-color: rgb(16, 16, 16);
+    color: white;
     display: none;
+    
 }
 
+#btn:active{
+    background-color:rgba(46, 46, 46, 0.894) ;
 
+}
 
+#btn:hover{
+    background-color:rgba(44, 44, 44, 0.894) ;
+    color: rgb(255, 255, 255);
+    
+    
+
+}
+
+#titulo-carrusel{
+    font-size: 40px;
+}
 
 .tarjeta-producto p{
     font-size: large;
-    font-weight: 400;
+    font-weight: 500;
+    color: rgb(22, 22, 22);
+}
+
+#btn2{
+    width: 150px;
+    height: 42px;
+    border: solid 1px white;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
 }
 
 
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
