@@ -117,6 +117,32 @@ main {
 }
 
 @media (max-width: 780px) {
+  .carousel-item {
+    #div-carousel {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      height: 100px;
+      justify-content: space-between;
+      padding-top: 10px;
+      border: solid rgba(128, 128, 128, 0) 2px;
+      margin: 0;
+
+      #titulo-carrusel {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      h6 {
+        display: none;
+      }
+      #btn2 {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+
   .seccionCategorias {
     display: flex;
     max-width: 90%;
@@ -198,7 +224,7 @@ main {
       flex-direction: column;
       align-items: center;
       h4 {
-        font-weight: 500;
+        font-weight: bold;
         font-size: 16px;
         align-self: center;
       }
@@ -215,41 +241,47 @@ main {
 }
 
 @media (max-width: 478px) {
+  #separador {
+    
+      display: flex;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 0px;
+      justify-content: center;
+      align-content: center;
+      background-color: rgb(248, 246, 246);
+    
+  }
 
+  .carousel-item {
+    #div-carousel {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      height: 80px;
+      justify-content: space-between;
+      padding-top: 10px;
+      border: solid rgba(128, 128, 128, 0) 2px;
+      margin: 0;
 
-    .carousel-item {
-        #div-carousel{
-
-            
-            display: flex;
-            flex-direction: column;
-            width: 75%;
-            height: 140px;
-            justify-content: space-between;
-            padding-top: 10px;
-            border: solid rgba(128, 128, 128, 0) 2px;
-            margin: 0;
-
-            #titulo-carrusel{
-                font-size: 16px;
-                font-weight: bold;
-            }
-            h6{
-                font-size: 12px;
-            }
-            #btn2{
-                width: 100px;
-                height:40px ;
-                font-size: 12px;
-            }
-        }
+      #titulo-carrusel {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      h6 {
+        display: none;
+      }
+      #btn2 {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+      }
     }
-
+  }
 
   .seccionCategorias {
     display: flex;
     max-width: 100%;
-    height: auto;
 
     background-color: rgb(248, 246, 246);
     justify-content: space-evenly;
@@ -270,7 +302,7 @@ main {
       text-align: center;
       gap: 10px;
       h4 {
-        font-weight: 600;
+        font-weight: bold;
         font-size: 16px;
       }
 
@@ -291,7 +323,7 @@ main {
     flex-wrap: wrap;
     gap: 2px;
     background-color: rgb(248, 246, 246);
-    padding: 6px;
+    padding: 4px;
 
     .tarjeta-producto {
       width: 140px;
@@ -341,7 +373,7 @@ main {
   margin: auto;
   background-color: rgb(248, 246, 246);
   justify-content: space-evenly;
-  gap: 5px;
+  gap: 20px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -365,9 +397,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   h4 {
-    font-weight: 500;
+    font-weight: bold;
   }
 }
 
@@ -388,9 +420,11 @@ main {
 
 #separador {
   display: flex;
-  padding-left: 80px;
-  padding-top: 60px;
+  padding: 20px;
+  justify-content: center;
+  align-content: center;
   background-color: rgb(248, 246, 246);
+  font-weight: bold;
 }
 
 #productContainer {
@@ -400,7 +434,7 @@ main {
   margin: auto;
   gap: 20px;
   background-color: rgb(248, 246, 246);
-  padding: 40px;
+  padding: 20px;
 }
 
 .tarjeta-producto {
