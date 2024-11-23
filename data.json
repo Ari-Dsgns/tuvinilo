@@ -2,12 +2,12 @@
 
     {
     
-        "id":1,
-        "title":"Nevermind",
-        "subtitle":"Nirvana",
-        "price":35.00,
-        "stock":23,
-        "image": "./img/nevermind.jpg"
+        "id":15,
+        "title":"L'Enfant Sauvage",
+        "subtitle":"Gojira",
+        "price":34.00,
+        "stock":2,
+        "image": "./img/gojira.jpg"
 
     },
 
@@ -137,7 +137,7 @@
         "id":13,
         "title":"The Rapture",
         "subtitle":"Siouxsie and The Banshees",
-        "price":86.00,
+        "price":56.00,
         "stock":1,
         "image": "./img/rapture.jpg"
 
@@ -152,5 +152,20 @@
         "stock":5,
         "image": "./img/kyuss.jpg"
 
+    },
+
+    {
+    
+        "id":1,
+        "title":"Nevermind",
+        "subtitle":"Nirvana",
+        "price":35.00,
+        "stock":23,
+        "image": "./img/nevermind.jpg"
+
     }
+
+
+
 ]
+

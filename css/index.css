@@ -211,6 +211,18 @@ main {
     justify-content: center;
     padding: 20px;
 
+    #proximamente{
+      font-size: 10px;
+      font-weight: bold;
+      display: block;
+      color: white;
+      position: absolute;
+      align-self: self-end;
+      padding-right: 18px;
+      padding-top: 12px;
+      color: orangered;
+    }
+
     .intro-image-box {
       display: flex;
       width: 180px;
@@ -287,6 +299,18 @@ main {
     justify-content: space-evenly;
     padding: 10px;
     gap: 10px;
+
+    #proximamente{
+      font-size: 8px;
+      font-weight: bold;
+      display: block;
+      color: white;
+      position: absolute;
+      align-self: self-end;
+      padding-right: 18px;
+      padding-top: 12px;
+      color: orangered;
+    }
 
     .intro-image-box {
       display: flex;
@@ -492,12 +516,13 @@ main {
 }
 
 #btn:active {
-  background-color: rgba(46, 46, 46, 0.894);
+  background-color: rgba(41, 41, 41, 0.894);
 }
 
 #btn:hover {
-  background-color: rgba(44, 44, 44, 0.894);
+  background-color: rgba(99, 96, 96, 0.894);
   color: rgb(255, 255, 255);
+  border: solid 1px black;
 }
 
 #titulo-carrusel {
@@ -516,6 +541,18 @@ main {
   border: solid 1px white;
   background-color: rgba(0, 0, 0, 0);
   color: white;
+}
+
+#proximamente{
+  font-size: 10px;
+  font-weight: bold;
+  display: block;
+  color: white;
+  position: absolute;
+  align-self: self-end;
+  padding-right: 18px;
+  padding-top: 12px;
+  color: orangered;
 }
 
 /* =====================================

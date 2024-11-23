@@ -1,5 +1,15 @@
 const containerCards= document.getElementById("productContainer");
 
+
+
+const btnCompra=document.getElementById("btn2").addEventListener("click",()=>{
+    Swal.fire({
+        title: "Producto no disponible",
+        text: "Te avisaremos cuando vuelva a estar en stock",
+        
+      });
+})
+
 function crearCardsInicio(){
 
 

@@ -21,6 +21,9 @@ function agregarAlcarrito(producto){
             text: `${producto.title} ${producto.subtitle} Agregado al carrito `,
             
             duration: 1500,
+
+            
+
             
         }).showToast();
 
