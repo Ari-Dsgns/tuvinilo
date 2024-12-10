@@ -5,6 +5,7 @@ const precioElement = document.getElementById("precio");
 const cartVacioElement = document.getElementById("cart-vacio");
 const totalesElement = document.getElementById("totales");
 
+
 const closeBtn =document.querySelector('.sideCart #close-x')
 
 closeBtn.addEventListener('click',()=>{
@@ -64,6 +65,7 @@ function crearCardsInicio() {
       
     });
 
+    
     
 
     
@@ -157,7 +159,11 @@ function revisarMensajeVacio() {
     "escondido",
     !(productos && productos.length > 0)
   );
+
+  
 }
+
+
 
 function reiniciarCart() {
   const nuevoStorage = localStorage.removeItem("vinilos") || [];
