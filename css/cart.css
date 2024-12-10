@@ -20,7 +20,7 @@ body {
   margin: 40px;
 }
 
-#productContainer {
+#productContainer{
   display: flex;
   height: auto;
   flex-direction: column;
@@ -31,7 +31,7 @@ body {
   justify-content: center;
   padding: 40px;
   border: solid 0px grey;
-  gap:4px;
+  gap: 4px;
 }
 .tarjeta-producto {
   display: flex;
@@ -87,7 +87,7 @@ body {
     color: rgb(233, 161, 6);
   }
 
-  p{
+  p {
     font-weight: 600;
   }
 }

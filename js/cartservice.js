@@ -41,6 +41,8 @@ function agregarAlcarrito(producto){
         
     };
     actualizarNumeroCarrito();
+    crearCardsInicio()
+    cardsCart()
     return cuenta;
 
 

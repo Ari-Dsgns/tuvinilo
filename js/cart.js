@@ -39,7 +39,7 @@ function crearCardsInicio() {
             e.target.parentElement.getElementsByTagName("span")[0];
           cuentaElement.innerHTML = agregarAlcarrito(vinilo);
           console.log(cuentaElement);
-
+          
           actualizarTotales();
           actualizarNumeroCarrito();
         });
