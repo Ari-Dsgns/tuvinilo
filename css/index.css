@@ -749,6 +749,17 @@ body.activeSideCart #nav{
   
   
   
+  
+}
+
+#close-x:hover{
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  right: -160px;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.271);
+  border-radius: 4px;
 }
 
 
