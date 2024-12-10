@@ -592,6 +592,8 @@ main {
     padding: 20px;
     font-size: 20px;
     font-weight: 600;
+    background-color: rgb(242, 239, 239);
+    border-radius: 4px;
   }
   
 }
@@ -677,6 +679,7 @@ body.activeSideCart #nav{
   align-items: center;
   /* background-color: #f0ececd1 ; */
   background-color:  #fffffffd;
+  
   justify-items: center;
   justify-content: center;
   padding: 40px;
@@ -694,7 +697,7 @@ body.activeSideCart #nav{
 .tarjeta-cart{
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(to left,#ffffff,#86858569);
+  background: linear-gradient(to left,#ffffff,#adacac69);
   box-shadow: 0px 0px 80px rgba(29, 28, 28, 0);
   align-items: left;
   width: 350px;
@@ -766,19 +769,35 @@ body.activeSideCart #nav{
 
 
 #totales {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 30vh;
+  justify-self: center;
   color: black;
   height: 20vh;
-  border-top: solid 1px rgb(169, 165, 165);
+  border: solid 1px rgba(113, 113, 113, 0.236);
+  border-radius: 4px;
   text-align: center;
   padding: 8px;
-  background-color: #fffffffd;
+  background-color: #f2f0f09c;
   a {
     text-decoration: none;
     color: rgb(233, 161, 6);
   }
 
   p {
-    font-weight: 600;
+    font-weight: 700;
+    border-bottom: solid 1px rgba(107, 107, 107, 0.404);
+    text-align: start;
+    
+  }
+
+  #unidades, #precio{
+    display: inline;
+    position: relative;
+    right: -160px;
   }
 }
 
@@ -801,6 +820,7 @@ body.activeSideCart #nav{
   width: 100%;
 
   border: none;
+  
   background-color: rgba(18, 18, 17, 0.894);
   color: rgb(247, 243, 243);
   cursor: pointer;
