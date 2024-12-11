@@ -24,42 +24,15 @@
 
 </head>
 <body>
-  
-  <header class="header">
-    <nav  class="navbar navbar-expand-md fixed-top bg-body-secondary p-3" id="nav" > <!-- fixed-top-->
-      <div style="top:-100px" class="container-fluid" id="nav">
-        <a class="navbar-brand " href="#"><img src="./img/logotipo2.png" alt=""></a>
-        <button class="navbar-toggler" href="#" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle disabled" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Productos
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#separador">Vinilos</a></li>
-                <li><a class="dropdown-item" href="">Tocadiscos</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="./sonido.html">Sistemas de sonido</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Donde estamos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" id="abrirCarrito" aria-disabled="true" href="#"></i><i class="bi bi-cart" id="carrito"><button id="cuenta-carrito">0</button></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <header class="header"></header>
+    <nav id="nav" style="top:-0px; position: fixed; width: 100%; ; z-index: 1000;">
+      <ul id="ul">
+        <li>Home</li>
+        <li>Productos</li>
+        <li>Donde estamos</li>
+        <li>Nosotros</li>
+        <li><a class="nav-link active" id="abrirCarrito" aria-disabled="true" href="#"><i class="bi bi-bag" id="carrito"><button id="cuenta-carrito">0</button></i></a></li>
+      </ul>
     </nav>
   </header>
 <main>
@@ -141,12 +114,13 @@
   <div class="sideCart">
     <h1 id="titulo-cart">Shopping cart <i id="close-x" class="bi bi-x-lg"></i></i></h1>
     <div class="listCart">
-      <h5 id="cart-vacio">Ups! No hay productos en el cart <br><a href="./index.html">Agrega algunos</a></h5>
+      <h5 id="cart-vacio" class="escondido" >Ups! No hay productos en el cart <br><a href="./index.html">Agregar</a></h5>
       <div class="" id="productContainerCart">Resumen de la compra</div>
       <div id="totales">
-        <p>Total unidades : <span id="unidades">0</span></p> 
-        <p>Total a pagar : <span id="precio"></span></p>
+        <p>Total unidades  <span id="unidades">0</span></p> 
+        <p>Total a pagar  <span id="precio">0</span></p>
         <button id="pagar" class="btn-buy-sidecart">Pagar</button>
+        <button id="paypal" class="btn-buy-paypal"><i class="bi bi-paypal" id="icon-paypal"></i></button>
       </div>
     </div>
     <div class="btnCart">

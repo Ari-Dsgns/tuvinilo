@@ -89,8 +89,13 @@ function actualizarNumeroCarrito(){
     const memoria = JSON.parse(localStorage.getItem("vinilos"));
     if(memoria && memoria.length > 0){
       cuenta = memoria.reduce((acum, current)=>acum+current.cantidad,0)
+      cuentaCarritoElement.style.display="inline-block"
       return cuentaCarritoElement.innerText = cuenta;
+      
+    }else{
+        cuentaCarritoElement.style.display="none"
     }
+
     
 };
 

@@ -9,7 +9,7 @@ window.addEventListener('scroll', function(){
     if (ubiPrincipal >= ubiActual) {
         $nav.style.top="0px"
     } else{
-        $nav.style.top="-100px";
+        $nav.style.top="-50px";
 
     }
 
@@ -21,3 +21,5 @@ window.addEventListener('scroll', function(){
 
 // ubiPrincipal:   0    0  se cumple condicion y se oculta nav con top0       50  se sigue cumpliendo condicion    80  no se cumple condicion y se oculta nav con top-100
 // ubiActual :     0   50                                                     80                                   40
+
+

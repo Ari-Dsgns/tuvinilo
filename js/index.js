@@ -36,6 +36,9 @@ const btnCompra = document
     });
   });
 
+
+
+
 function crearCardsInicio() {
   fetch("./data.json")
     .then((response) => response.json())
