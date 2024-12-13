@@ -48,7 +48,7 @@ function agregarAlcarrito(producto) {
     localStorage.setItem("vinilos", JSON.stringify(nuevaMemoria));
   }
   actualizarNumeroCarrito();
-  crearCardsInicio();
+  // crearCardsInicio();
   cardsCart();
   return cuenta;
   
