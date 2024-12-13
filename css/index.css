@@ -55,6 +55,31 @@ main {
   
 }
 
+/* =====================================
+=               carousels                =
+===================================== */
+
+.bg-img-1{
+  background-image: url("../img/foto1.jpg");
+}
+
+.bg-img-2{
+  background-image: url("../img/foto2.jpg");
+}
+
+.bg-img-3{
+  background-image: url("../img/Debut-Carbon-EVO-65.jpg");
+}
+
+.carousel-image{
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
 
 
 
@@ -137,6 +162,14 @@ main {
 }
 
 @media (max-width: 896px) {
+
+  .carousel-image{
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   .seccionCategorias {
     .intro-image-box {
       display: flex;
@@ -173,6 +206,14 @@ main {
 }
 
 @media (max-width: 780px) {
+
+  .carousel-image{
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   .carousel-item {
     #div-carousel {
       display: flex;
@@ -314,7 +355,12 @@ main {
 
 @media (max-width: 478px) {
 
-  
+  .carousel-image{
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
   #separador {
     display: flex;
