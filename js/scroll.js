@@ -6,6 +6,8 @@ window.addEventListener('scroll', function(){
     let ubiActual=window.scrollY
     console.log(ubiActual);
 
+    
+
     if (ubiPrincipal >= ubiActual) {
         $nav.style.top="0px"
     } else{

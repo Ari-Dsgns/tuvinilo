@@ -1,16 +1,20 @@
 const containerCards = document.getElementById("productContainer");
 const containerCart = document.getElementById("productContainerCart");
-const cantidadElement = document.getElementById("unidades");
-const precioElement = document.getElementById("precio");
+const cantidadElement= document.getElementById("unidades");
+const precioElement= document.getElementById("precio");
 const cartVacioElement = document.getElementById("cart-vacio");
-const totalesElement = document.getElementById("totales");
+const totalesSideCart = document.getElementById("totales");
 
 
 const closeBtn =document.querySelector('.sideCart #close-x')
 
+
 closeBtn.addEventListener('click',()=>{
   bodyElement.classList.toggle("activeSideCart")
+
 })
+
+
 
 
 
@@ -27,14 +31,20 @@ const iconCart = document
 
 const bodyElement = document.querySelector("body");
 
-const btnCompra = document
-  .getElementById("btn2")
-  .addEventListener("click", () => {
+const btnCompra = document.querySelectorAll("#btn2");
+
+  btnCompra.forEach((btn2)=>{
+    btn2.addEventListener("click",()=>{
     Swal.fire({
       title: "Producto no disponible",
       text: "Te avisaremos cuando vuelva a estar en stock",
+      confirmButtonColor: "#FF622D",
     });
   });
+  })
+  
+    
+  
 
 
 
@@ -123,6 +133,15 @@ function cardsCart() {
             text: "Producto eliminado del carrito",
 
             duration: 1500,
+
+            style: {
+              background: "linear-gradient(to right,rgb(255, 55, 44),rgb(255, 206, 157))",
+          },
+
+          offset: {
+              x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+              y: 50 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          },
           }).showToast();
 
           cardsCart()
@@ -158,7 +177,7 @@ function revisarMensajeVacio() {
     "escondido",
     productos && productos.length > 0
   );
-  totalesElement.classList.toggle(
+  totalesSideCart.classList.toggle(
     "escondido",
     !(productos && productos.length > 0)
   );
@@ -177,7 +196,10 @@ function reiniciarCart() {
     title: "Compra finalizada",
     text: "Gracias por tu compra!",
     icon: "success",
+    confirmButtonColor: "#FF622D",
   });
+
+  bodyElement.classList.toggle("activeSideCart")
 
   actualizarTotales();
 }

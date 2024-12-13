@@ -53,6 +53,16 @@ function crearCardsInicio() {
             text: "Producto eliminado del carrito",
 
             duration: 1500,
+
+            style: {
+              background: "linear-gradient(to right,rgb(255, 55, 44),rgb(255, 206, 157))",
+          },
+
+          offset: {
+              x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+              y: 50 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          },
+          
           }).showToast();
 
           crearCardsInicio();
@@ -104,6 +114,7 @@ function reiniciarCart() {
     title: "Compra finalizada",
     text: "Gracias por tu compra!",
     icon: "success",
+    confirmButtonColor: "#FF622D",
   });
 
   actualizarTotales();

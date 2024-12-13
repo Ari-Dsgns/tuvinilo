@@ -14,6 +14,45 @@ body {
   padding-top: 60px;
 }
 
+#nav{
+  font-family: "Nunito Sans", sans-serif;
+  background-color: rgba(20, 20, 20, 0.955);
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  position: fixed;
+  padding-right: 20px;
+  padding-top: 10PX;
+  gap: 20px;
+  width: 100%;
+  height: 50px;
+  transition: 0.5s;
+  ul li, a{
+    list-style: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    
+
+  }
+
+}
+#nav ul{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: fixed;
+  align-items: center;
+  height: 50px;
+  gap: 20px;
+  padding-top: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+  
+}
+
+
 #titulo-cart {
   text-align: right;
   padding-right: 40px;

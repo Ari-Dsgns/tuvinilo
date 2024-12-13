@@ -1,107 +1,97 @@
-function agregarAlcarrito(producto){
+function agregarAlcarrito(producto) {
+  const memoria = JSON.parse(localStorage.getItem("vinilos")) || []; // aqui parseamos(para que no nos devuelva un string) y leemos en la memoria si hay algun item que se llame vinilos
+  console.log(memoria);
 
-    const memoria=JSON.parse(localStorage.getItem("vinilos")) || [];// aqui parseamos(para que no nos devuelva un string) y leemos en la memoria si hay algun item que se llame vinilos
-    console.log(memoria);
+  let cuenta = 0;
 
-    let cuenta=0;
+  if (!memoria) {
+    //aqui validamos si memoria en null
+    const nuevoProducto = getNuevoProductoParaMemoria(producto);
 
-    if(!memoria){ //aqui validamos si memoria en null 
-        const nuevoProducto=getNuevoProductoParaMemoria(producto);
-        
-        localStorage.setItem("vinilos",JSON.stringify([nuevoProducto]));//entramos en el local y seteamos el nuevo producto y el array convertido en string para que lo lea (saltamos a la creacion de la tarjeta)
-        cuenta=1;
-    }else{
-        const indiceProducto= memoria.findIndex(vinilo=>vinilo.id===producto.id);
-        // console.log(indiceProducto); 
+    localStorage.setItem("vinilos", JSON.stringify([nuevoProducto])); //entramos en el local y seteamos el nuevo producto y el array convertido en string para que lo lea (saltamos a la creacion de la tarjeta)
+    cuenta = 1;
+  } else {
+    const indiceProducto = memoria.findIndex(
+      (vinilo) => vinilo.id === producto.id
+    );
+    // console.log(indiceProducto);
 
-        const nuevaMemoria=memoria;
+    const nuevaMemoria = memoria;
+    
+    
+    
+    Toastify({
+      text: `${producto.title} ${producto.subtitle} Agregado al carrito `,
+      duration: 1500,
+      style: {
+        background:
+          "linear-gradient(to right,rgb(255, 44, 44),rgb(255, 206, 157))",
+      },
+      offset: {
+        x: 20, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+        y: 50, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+      },
+    }).showToast();
 
-        Toastify({
+    
+    
 
-            text: `${producto.title} ${producto.subtitle} Agregado al carrito `,
-            
-            duration: 1500,
+    if (indiceProducto === -1) {
+      // si el elemento no existe, devuelve -1, si existe nos dvuelve elarray y su posicion
 
-            
-
-            
-        }).showToast();
-
-        if(indiceProducto=== -1) { // si el elemento no existe, devuelve -1, si existe nos dvuelve elarray y su posicion
-            
-            nuevaMemoria.push(getNuevoProductoParaMemoria(producto));
-            cuenta=1;
-        }else{
-            nuevaMemoria[indiceProducto].cantidad ++;
-            cuenta=nuevaMemoria[indiceProducto].cantidad;
-        }
-        localStorage.setItem("vinilos",JSON.stringify(nuevaMemoria));
-        
-
-        
-    };
-    actualizarNumeroCarrito();
-    crearCardsInicio()
-    cardsCart()
-    return cuenta;
-
-
-
-
-};
-
+      nuevaMemoria.push(getNuevoProductoParaMemoria(producto));
+      cuenta = 1;
+    } else {
+      nuevaMemoria[indiceProducto].cantidad++;
+      cuenta = nuevaMemoria[indiceProducto].cantidad;
+    }
+    localStorage.setItem("vinilos", JSON.stringify(nuevaMemoria));
+  }
+  actualizarNumeroCarrito();
+  crearCardsInicio();
+  cardsCart();
+  return cuenta;
+  
+}
 
 function restarAlcarrito(producto) {
+  const memoria = JSON.parse(localStorage.getItem("vinilos")) || [];
 
-    const memoria=JSON.parse(localStorage.getItem("vinilos")) || [];
+  const indiceProducto = memoria.findIndex(
+    (vinilo) => vinilo.id === producto.id
+  );
 
-    const indiceProducto= memoria.findIndex(vinilo=>vinilo.id===producto.id);
+  if (memoria[indiceProducto].cantidad === 1) {
+    memoria.splice(indiceProducto, 1);
+  } else {
+    memoria[indiceProducto].cantidad--;
+  }
 
-    if(memoria[indiceProducto].cantidad===1) {
+  localStorage.setItem("vinilos", JSON.stringify(memoria));
+  actualizarNumeroCarrito();
+}
 
-        memoria.splice(indiceProducto,1);
-        
-        } else {
+//toma un produucto, le agrega cantidad 1 y lo devuelve//
+function getNuevoProductoParaMemoria(producto) {
+  const nuevoProducto = producto;
+  nuevoProducto.cantidad = 1;
+  return nuevoProducto;
+}
 
-        memoria[indiceProducto].cantidad--;
+const cuentaCarritoElement = document.getElementById("cuenta-carrito");
 
-        }
-
-    localStorage.setItem("vinilos",JSON.stringify(memoria));
-    actualizarNumeroCarrito()
-
-
+function actualizarNumeroCarrito() {
+  let cuenta = 0;
+  const memoria = JSON.parse(localStorage.getItem("vinilos"));
+  if (memoria && memoria.length > 0) {
+    cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
+    cuentaCarritoElement.style.display = "inline-block";
+    return (cuentaCarritoElement.innerText = cuenta);
+  } else {
+    cuentaCarritoElement.style.display = "none";
+  }
 }
 
 
-//toma un produucto, le agrega cantidad 1 y lo devuelve//
-function getNuevoProductoParaMemoria(producto){
-    const nuevoProducto=producto;  
-    nuevoProducto.cantidad = 1;
-    return nuevoProducto;
-};
 
-const cuentaCarritoElement= document.getElementById("cuenta-carrito");
-
-
-function actualizarNumeroCarrito(){
-    let cuenta = 0;
-    const memoria = JSON.parse(localStorage.getItem("vinilos"));
-    if(memoria && memoria.length > 0){
-      cuenta = memoria.reduce((acum, current)=>acum+current.cantidad,0)
-      cuentaCarritoElement.style.display="inline-block"
-      return cuentaCarritoElement.innerText = cuenta;
-      
-    }else{
-        cuentaCarritoElement.style.display="none"
-    }
-
-    
-};
-
-actualizarNumeroCarrito()
-
-
-
-
-
+actualizarNumeroCarrito();
