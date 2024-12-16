@@ -1,22 +1,14 @@
 const containerCards = document.getElementById("productContainer");
 const containerCart = document.getElementById("productContainerCart");
-const cantidadElement= document.getElementById("unidades");
-const precioElement= document.getElementById("precio");
+const cantidadElement = document.getElementById("unidades");
+const precioElement = document.getElementById("precio");
 const cartVacioElement = document.getElementById("cart-vacio");
-const totalesSideCart = document.getElementById("totales");
+const totalesElement = document.getElementById("totales");
+const closeBtn = document.querySelector(".sideCart #close-x");
 
-
-const closeBtn =document.querySelector('.sideCart #close-x')
-
-
-closeBtn.addEventListener('click',()=>{
-  bodyElement.classList.toggle("activeSideCart")
-
-})
-
-
-
-
+closeBtn.addEventListener("click", () => {
+  bodyElement.classList.toggle("activeSideCart");
+});
 
 const btnComprar = document.getElementById("pagar");
 btnComprar.addEventListener("click", reiniciarCart);
@@ -24,30 +16,39 @@ btnComprar.addEventListener("click", reiniciarCart);
 const iconCart = document
   .querySelector("#carrito")
   .addEventListener("click", () => {
-
     bodyElement.classList.toggle("activeSideCart");
-    
   });
 
 const bodyElement = document.querySelector("body");
 
 const btnCompra = document.querySelectorAll("#btn2");
 
-  btnCompra.forEach((btn2)=>{
-    btn2.addEventListener("click",()=>{
+btnCompra.forEach((btn2) => {
+  btn2.addEventListener("click", () => {
     Swal.fire({
       title: "Producto no disponible",
       text: "Te avisaremos cuando vuelva a estar en stock",
       confirmButtonColor: "#FF622D",
     });
   });
-  })
-  
-    
-  
+});
 
+let ubiPrincipal = window.scrollY;
 
+let $nav = document.querySelector("#nav");
 
+window.addEventListener("scroll", function () {
+  let ubiActual = window.scrollY;
+  console.log(ubiActual);
+
+  if (ubiPrincipal >= ubiActual) {
+    $nav.style.top = "0px";
+  } else {
+    $nav.style.top = "-50px";
+  }
+
+  ubiPrincipal = ubiActual;
+});
 
 function crearCardsInicio() {
   fetch("./data.json")
@@ -62,9 +63,11 @@ function crearCardsInicio() {
         <img id="img" src="${vinilo.image}">
             <div id="div">
                 <h5>${vinilo.title}</h5>
-                <h6>${vinilo.subtitle}</h6>
-                <p>${vinilo.price}€</p>
-                <button id="btn">Agregar <i class="bi bi-bag"></i></button>
+                <div id="sub2">
+                  <h6>${vinilo.subtitle}</h6>
+                  <p>${vinilo.price}€</p>
+                </div>
+                <button id="add"><i class="bi bi-plus-lg"></i></button>
             </div>
         
         `;
@@ -72,16 +75,8 @@ function crearCardsInicio() {
         cardElement
           .getElementsByTagName("button")[0]
           .addEventListener("click", () => agregarAlcarrito(vinilo));
-          
       });
-
-      
     });
-
-    
-    
-
-    
 }
 
 function cardsCart() {
@@ -124,7 +119,7 @@ function cardsCart() {
           actualizarNumeroCarrito();
         });
 
-        nuevoVinilo
+      nuevoVinilo
         .getElementsByTagName("button")[0]
         .addEventListener("click", (e) => {
           restarAlcarrito(vinilo);
@@ -135,20 +130,19 @@ function cardsCart() {
             duration: 1500,
 
             style: {
-              background: "linear-gradient(to right,rgb(255, 55, 44),rgb(255, 206, 157))",
-          },
+              background:
+                "linear-gradient(to right,rgb(255, 55, 44),rgb(255, 206, 157))",
+            },
 
-          offset: {
+            offset: {
               x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-              y: 50 // vertical axis - can be a number or a string indicating unity. eg: '2em'
-          },
+              y: 50, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            },
           }).showToast();
 
-          cardsCart()
+          cardsCart();
           actualizarTotales();
         });
-
-      
     });
   }
 
@@ -177,15 +171,11 @@ function revisarMensajeVacio() {
     "escondido",
     productos && productos.length > 0
   );
-  totalesSideCart.classList.toggle(
+  totalesElement.classList.toggle(
     "escondido",
     !(productos && productos.length > 0)
   );
-
-  
 }
-
-
 
 function reiniciarCart() {
   const nuevoStorage = localStorage.removeItem("vinilos") || [];
@@ -199,12 +189,10 @@ function reiniciarCart() {
     confirmButtonColor: "#FF622D",
   });
 
-  bodyElement.classList.toggle("activeSideCart")
+  bodyElement.classList.toggle("activeSideCart");
 
   actualizarTotales();
 }
-
-
 
 crearCardsInicio();
 
