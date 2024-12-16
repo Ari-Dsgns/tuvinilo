@@ -642,6 +642,9 @@ main {
       
         -webkit-animation: heartbeat 1s ease-in-out infinite both;
         animation: heartbeat 1s ease-in-out infinite both;
+
+        box-shadow: -2px 5px 20px rgba(4, 4, 4, 0.61);
+        transition: 0.2s;
       
     }
     
