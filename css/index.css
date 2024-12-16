@@ -647,6 +647,10 @@ main {
         transition: 0.2s;
       
     }
+
+    .tarjeta-cart:hover{
+      box-shadow: none;
+    }
     
   }
   
