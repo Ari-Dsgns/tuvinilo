@@ -49,10 +49,18 @@ main {
       font-weight: 200;
       cursor: pointer;
     }
+
+    
   }
   
 
 }
+
+
+
+
+
+
 
 
 
@@ -615,27 +623,7 @@ main {
         p {
           font-size: 14px;
         }
-        #add{
-          display: block;
-          position: relative;
-          top:-210px;
-          right: -110px;
-          width: 30px;
-          height: 30px;
-          color: rgba(35, 34, 34, 0.753);
-          background-color: rgba(250, 204, 22, 0.976);
-          border: none;
-          border-radius: 50px;
-          
-
-          -webkit-animation: shake-horizontal 0s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: shake-horizontal 0s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-          
-        }
-        #add:active {
-          -webkit-animation: heartbeat 0s ease-in-out infinite both;
-          animation: heartbeat 0s ease-in-out infinite both;
-        }
+        
 
       }
     }
@@ -752,61 +740,47 @@ main {
   max-width: 240px;
   max-height: 300px;
   border-radius: 6px;
-  background-color: rgba(96, 94, 94, 0.151);
+  background-color: rgb(219, 216, 216);
+  box-shadow: 0px 0px 20px rgba(32, 32, 32, 0.476);
   color: rgb(43, 41, 41);
   cursor: pointer;
+  position: relative;
+  transition: 1s;
 
   
 }
 
-.tarjeta-producto:hover {
+.tarjeta-producto:hover{
+  box-shadow: 0px 0px 30px rgba(31, 30, 30, 0.798);
+  transition: 0.5s;
 
-  box-shadow: 0px 0px 20px rgba(32, 32, 32, 0.767);
+  div{
+    padding: 0px;
+  }
+}
 
-  #add{
-    display: block;
-    position: relative;
-    top:-310px;
-    right: -185px;
-    width: 40px;
-    height: 40px;
-    color: rgba(35, 34, 34, 0.753);
-    background-color: rgba(250, 204, 22, 0.339);
-    border: none;
-    border-radius: 50px;
-
-    -webkit-animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    
-  }
-  #add:hover{
-    background-color: rgba(250, 204, 22, 0.942);
-    -webkit-animation: shake-horizontal 0s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: shake-horizontal 0s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    
-  }
-  #add:active {
-    -webkit-animation: heartbeat 0.8s ease-in-out infinite both;
-    animation: heartbeat 0.8s ease-in-out infinite both;
-  }
+.tarjeta-producto:hover #add-to-cart {
+  
+  display: block;
+  opacity: 1;
+  visibility: visible; 
+  transition: opacity 1s ease-in-out 1s, visibility 0s;
+  color: rgb(31, 30, 30);
+  
 
 }
 
+.tarjeta-producto #add-to-cart:hover{
+  color: rgb(18, 18, 19);
+  
+}
 .tarjeta-producto:active{
-  box-shadow: -2px 5px 20px rgba(4, 4, 4, 0.61);
+  box-shadow: 0px -2px 20px rgba(4, 4, 4, 0.894);
   transition: 0.2s;
   
 }
 
 
-#add:active {
-  -webkit-animation: heartbeat 0.8s ease-in-out infinite both;
-  animation: heartbeat 0.8s ease-in-out infinite both;
-}
-
-#add:hover{
-  background-color: rgba(250, 204, 22, 0.942);
-}
 
 .tarjeta-producto img {
   width: 100%;
@@ -837,16 +811,23 @@ main {
     color: rgb(77, 73, 73);
     font-size: 14px;
     font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   h5 {
     padding-left: 4px;
     font-weight: bold;
     font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   p{
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 500;
   }
+
 }
 
 
@@ -859,6 +840,32 @@ main {
   border: none;
   border-radius: 50px;
 }
+
+#add-to-cart{
+  display: none;
+    position: relative;
+    top: -64px;
+    height: 60px;
+    width: 100%;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    font-size: 14px;
+    color: rgb(30, 29, 29);
+    font-weight: 500;
+    opacity: 0;
+    visibility: hidden; 
+    transition: opacity 1s ease-in-out 1s, visibility 0s 1.5s;
+  
+
+}
+
+
+
+
+
+
 
 
 
@@ -895,6 +902,27 @@ main {
 /* =====================================
 =              sideCart               =
 ===================================== */
+
+
+
+/* .desplegable{
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 250px;
+  background-color: rgb(23, 22, 22);
+  color: white;
+  top: -250px;
+  padding: 70px;
+  transition: ease-in-out 0.5s;
+
+}
+
+body.desplegableActive .desplegable{
+  top:0px
+} */
+
+
 
 
 

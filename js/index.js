@@ -6,6 +6,16 @@ const cartVacioElement = document.getElementById("cart-vacio");
 const totalesElement = document.getElementById("totales");
 const closeBtn = document.querySelector(".sideCart #close-x");
 
+
+const desplegable=document.querySelector("#prod")
+
+desplegable.addEventListener("click", ()=>{
+    bodyElement.classList.toggle("desplegableActive")
+})
+
+
+
+
 closeBtn.addEventListener("click", () => {
   bodyElement.classList.toggle("activeSideCart");
 });
@@ -67,7 +77,7 @@ function crearCardsInicio() {
                   <h6>${vinilo.subtitle}</h6>
                   <p>${vinilo.price}€</p>
                 </div>
-                <button id="add"><i class="bi bi-plus-lg"></i></button>
+                <button id="add-to-cart">Agregar <i id="bag"class="bi bi-bag"></i></button>
             </div>
         
         `;
