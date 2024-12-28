@@ -18,7 +18,7 @@ function agregarAlcarrito(producto) {
 
     const nuevaMemoria = memoria;
     
-    
+    $nav.style.top="0px"
     
     Toastify({
       text: `${producto.title} ${producto.subtitle} Agregado al carrito `,
@@ -32,6 +32,9 @@ function agregarAlcarrito(producto) {
         y: 50, // vertical axis - can be a number or a string indicating unity. eg: '2em'
       },
     }).showToast();
+
+
+    
 
     
     
@@ -50,6 +53,7 @@ function agregarAlcarrito(producto) {
   actualizarNumeroCarrito();
   // crearCardsInicio();
   cardsCart();
+  
   return cuenta;
   
 }
@@ -69,6 +73,7 @@ function restarAlcarrito(producto) {
 
   localStorage.setItem("vinilos", JSON.stringify(memoria));
   actualizarNumeroCarrito();
+  
 }
 
 //toma un produucto, le agrega cantidad 1 y lo devuelve//
@@ -80,18 +85,41 @@ function getNuevoProductoParaMemoria(producto) {
 
 const cuentaCarritoElement = document.getElementById("cuenta-carrito");
 
+
+
 function actualizarNumeroCarrito() {
   let cuenta = 0;
   const memoria = JSON.parse(localStorage.getItem("vinilos"));
   if (memoria && memoria.length > 0) {
     cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
     cuentaCarritoElement.style.display = "inline-block";
+    
+    
     return (cuentaCarritoElement.innerText = cuenta);
   } else {
     cuentaCarritoElement.style.display = "none";
   }
+  
+}
+
+const bagElement=document.getElementById("bag");
+
+function actualizarBolsa(){
+  let cuenta=0;
+  const memoria=JSON.parse(localStorage.getItem("vinilos"));
+  if(memoria && memoria.length > 0){
+    cuenta=memoria.reduce((acum,current) =>acum +current.cantidad,0);
+    bagElement.style.display="inline-block";
+
+    return(bagElement.innerHTML=cuenta);
+  }else{
+    bagElement.style.display="none";
+  }
+
 }
 
 
 
 actualizarNumeroCarrito();
+
+actualizarBolsa();
