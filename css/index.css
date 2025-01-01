@@ -118,38 +118,8 @@ main {
 =               mediaqueries                =
 ===================================== */
 
-@media (max-width: 1457px) {
-  .seccionCategorias {
-    .intro-image-box {
-      display: flex;
-      width: 280px;
-      height: 160px;
-      overflow: hidden;
-    }
-
-    .cardCateg {
-      #arrow-position {
-        display: none;
-        color: white;
-        position: absolute;
-        align-self: self-end;
-        padding-right: 12px;
-        padding-top: 122px;
-      }
-    }
-  }
-
-  .cardCateg {
-    #arrow-position {
-      display: none;
-      color: white;
-      position: absolute;
-      align-self: self-end;
-      padding-right: 12px;
-      padding-top: 122px;
-    }
-  }
-
+@media (max-width: 1440px) {
+  
   .tarjeta-producto {
     width: 200px;
     height: 260px;
@@ -243,8 +213,8 @@ main {
   .seccionCategorias {
     .intro-image-box {
       display: flex;
-      width: 240px;
-      height: 140px;
+      width: 300px;
+      height: 200px;
       overflow: hidden;
     }
 
@@ -253,14 +223,6 @@ main {
       h4 {
         font-weight: 500;
         font-size: 18px;
-      }
-      #arrow-position {
-        display: none;
-        color: white;
-        position: absolute;
-        align-self: self-end;
-        padding-right: 28px;
-        padding-top: 100px;
       }
     }
   }
@@ -275,7 +237,7 @@ main {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 768px) {
 
   .carousel-image{
     height: 50vh;
@@ -299,9 +261,7 @@ main {
         font-size: 16px;
         font-weight: bold;
       }
-      h6 {
-        display: none;
-      }
+      
       #btn2 {
         width: 100px;
         height: 30px;
@@ -312,19 +272,19 @@ main {
 
   .seccionCategorias {
     display: flex;
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
 
     margin: auto;
     background-color: rgb(248, 246, 246);
     justify-content: space-between;
-    padding: 20px;
+    padding: 60px;
 
     .intro-image-box {
       display: flex;
-      width: 200px;
-      height: 120px;
-      overflow: hidden;
+      width: 280px;
+      height: 180px;
+      
     }
 
     .cardCateg {
@@ -332,14 +292,6 @@ main {
         font-weight: 500;
         font-size: 18px;
         align-self: center;
-      }
-      #arrow-position {
-        display: none;
-        color: white;
-        position: absolute;
-        align-self: self-end;
-        padding-right: 12px;
-        padding-top: 80px;
       }
     }
   }
@@ -352,75 +304,89 @@ main {
     gap: 10px;
     background-color: rgb(248, 246, 246);
     padding: 20px;
-  }
 
-  .tarjeta-producto {
-    width: 150px;
-    height: 210px;
-    
-    background-color: rgb(248, 246, 246);
-    transition: 500ms;
-    color: rgb(43, 41, 41);
-  }
-  .tarjeta-producto:hover {
+    .tarjeta-producto {
+      width: 150px;
+      height: 210px;
 
-    box-shadow: 0px 0px 20px rgba(32, 32, 32, 0.767);
-  
-    #add-to-cart {
-      display: none;
-      position: relative;
-      top:-125px;
-      right: -86px;
-      transition: 0.5s;
+      div{
+        #sub2{
+          justify-content: start;
+          border-top: solid 1px rgba(120, 119, 119, 0);
+        }
+
+        h5{
+          font-size: 14px;
+        }
+
+        h6{
+          font-size: 0px;
+        }
+
+        
+        
+      }
+
+      #add-to-cart{
+        
+        display:block;
+        position: relative;
+        opacity: 1;
+        visibility: visible; 
+        font-size:14px;
+        transition: 1s;
+        
+        top: -50px;
+        right: -60px;
+        height: 30px;
+        width: 80px;
+        border-radius: 8px;
+        
+        border: none;
+        background-color: rgba(66, 64, 64, 0);
+        color: rgba(24, 23, 23, 0);
+
+        #bag{
+          color: orangered;
+          font-size: 20px;
+        }
+
     }
-  }
-  
-  
-  
-  .tarjeta-producto img {
-    width: 100%;
-    opacity: 100%;
-    aspect-ratio: 1;
-    border-top-left-radius:6px ;
-    border-top-right-radius: 6px;
-  }
-  
-  
-  
-  .tarjeta-producto div {
-    display: flex;
-    opacity: 100%;
-    flex-direction: column;
-    padding: 4px;
-    
-    #sub2{
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
+
       
     }
-    h6 {
-      color: rgb(77, 73, 73);
-      font-size: 14px;
-      font-weight: 600;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+
+    .tarjeta-producto:hover{
+      outline: 0px;
+      box-shadow: 0px 0px 20px rgba(32, 32, 32, 0.476);
+      div{
+        padding: 4px;
+      }
     }
-    h5 {
-      padding-left: 4px;
-      font-weight: bold;
-      font-size: 16px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+
+    
+
+    .tarjeta-producto:hover #add-to-cart{
+      display:block;
+      color: rgba(24, 23, 23, 0);
+      
     }
-    p{
-      font-size: 16px;
-      font-weight: bold;
+
+    .tarjeta-producto:active{
+      box-shadow: 0px -5px 20px rgba(4, 4, 4, 0.894);
+      transition: 0.2s;
+      
     }
+
+    
   }
+
+  
+
+  
+
+  
+
 }
 
 
@@ -452,8 +418,8 @@ main {
 
     .intro-image-box {
       display: flex;
-      width: 180px;
-      height: 100px;
+      width: 220px;
+      height: 120px;
       overflow: hidden;
     }
 
@@ -467,14 +433,7 @@ main {
         font-size: 16px;
         align-self: center;
       }
-      #arrow-position {
-        display: none;
-        color: white;
-        position: absolute;
-        align-self: self-end;
-        padding-right: 12px;
-        padding-top: 65px;
-      }
+      
     }
   }
 
@@ -601,53 +560,50 @@ main {
 
     .tarjeta-producto {
       width: 150px;
-      height: 200px;
-      border: solid 0px rgba(219, 219, 219, 0);
-      background-color: rgba(89, 86, 86, 0.253);
-      color: rgb(43, 41, 41);
-      box-shadow: 0px 0px 20px rgba(46, 45, 45, 0.671);
+      height: 210px;
+      
 
-      div {
-        display: flex;
-        height: auto;
-        align-content: space-evenly;
-        flex-direction: column;
-        padding: 2px;
-        h6 {
-          color: rgb(77, 73, 73);
-          font-size: 14px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+      div{
+        #sub2{
+          justify-content: start;
+          border-top: solid 1px rgba(120, 119, 119, 0);
         }
-        h5 {
-          font-size: 14px;
-          font-weight: bold;
-          text-overflow: ellipsis;
+
+        h5{
+          font-size: 16px;
         }
-        p {
-          font-size: 14px;
+
+        h6{
+          font-size: 0px;
         }
+
         
-
+        
       }
 
       #add-to-cart{
         
-          display:block;
-          position: relative;
-          opacity: 1;
-          visibility: visible; 
-          transition: 1s;
-          color: rgb(31, 30, 30);
-          top: -215px;
-          right: -65px;
-          height: 30px;
-          width: 80px;
-          border-radius: 4px;
-          border: solid white 1px;
-          background-color: rgb(25, 24, 24);
-          color: white;
+        display:block;
+        position: relative;
+        opacity: 1;
+        visibility: visible; 
+        font-size:14px;
+        transition: 1s;
+        
+        top: -50px;
+        right: -60px;
+        height: 30px;
+        width: 80px;
+        border-radius: 8px;
+        
+        border: none;
+        background-color: rgba(66, 64, 64, 0);
+        color: rgba(24, 23, 23, 0);
+
+        #bag{
+          color: orangered;
+          font-size: 20px;
+        }
           
         
       }
@@ -694,18 +650,22 @@ main {
   height: 220px;
   overflow: hidden;
   border-radius: 4px;
+  cursor: pointer;
   
 }
 
-.intro-image-box img {
+.intro-image-box #foto-cat {
   transform: scale(1);
   transition: transform 0.5s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   
-  
-  
+
 }
-.intro-image-box img:hover {
-  transform: scale(1.05);
+
+.intro-image-box  #foto-cat:hover {
+  transform: scale(1.1);
   
 }
 
@@ -728,14 +688,7 @@ main {
   }
 }
 
-#arrow-position {
-  display: none;
-  color: white;
-  position: absolute;
-  align-self: self-end;
-  padding-right: 18px;
-  padding-top: 172px;
-}
+
 
 #separador {
   display: flex;
@@ -763,7 +716,7 @@ main {
   max-width: 240px;
   max-height: 300px;
   border-radius: 6px;
-  background-color: rgb(219, 216, 216);
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 20px rgba(32, 32, 32, 0.476);
   color: rgb(43, 41, 41);
   cursor: pointer;
@@ -774,9 +727,10 @@ main {
 }
 
 .tarjeta-producto:hover{
-  box-shadow: 0px 0px 30px rgba(31, 30, 30, 0.798);
-  transition: 0.5s;
-
+  box-shadow: 0px 0px 20px rgba(32, 32, 32, 0.476);
+  transition: 0s;
+  outline: 2px solid orangered;
+  
   div{
     padding: 0px;
   }
@@ -787,14 +741,11 @@ main {
   display: block;
   opacity: 1;
   visibility: visible; 
-  transition: 1s;
-  color: rgb(31, 30, 30);
-  
-
 }
 
 .tarjeta-producto #add-to-cart:hover{
-  color: rgb(18, 18, 19);
+  color: orangered;
+  
   
 }
 .tarjeta-producto:active{
@@ -869,15 +820,15 @@ main {
 #add-to-cart{
   display: none;
     position: relative;
-    top: -64px;
+    top: -65px;
     height: 60px;
     width: 100%;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
-    background-color: rgb(245, 245, 245);
+    background-color: rgba(255, 255, 255, 0.993);
     border: none;
     font-size: 14px;
-    color: rgb(30, 29, 29);
+    color: rgb(255, 69, 2);
     font-weight: 500;
     opacity: 0;
     visibility: hidden; 
@@ -979,18 +930,9 @@ body.desplegableActive .desplegable{
   
 }
 
-
-
-.sideCart .listCart{
-  overflow: auto;
-  
-}
-
 .sideCart .listcar::-webkit-scrollbar{
- 
-  width: 0;
+  width: 6px;
 }
-
 
 body.activeSideCart .sideCart{
   
@@ -1068,27 +1010,32 @@ body.activeSideCart #nav{
   flex-direction: column;
   align-items: center;
   /* background-color: #f0ececd1 ; */
-  background-color:  #fffffffd;
+  background-color:  #ffffff00;
   
   justify-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 0px;
   border-top: solid 0px grey;
   gap: 8px;
 }
 
 .listCart{
+  height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   border-radius: 4px;
-  border: solid 0px grey;
+  border: solid 0px rgba(139, 139, 139, 0.76);
+  padding: 10px;
   background-color: rgb(255, 255, 255);
-
+  box-shadow: inset 0px 0px 20px 1px rgba(159, 159, 159, 0.12);
+  
 }
 
 .tarjeta-cart{
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(to left,#ffffff,#dededefa);
-  box-shadow: 0px 0px 80px rgba(29, 28, 28, 0);
+  background: rgb(243, 242, 242);
+  box-shadow: 0px 0px 10px rgba(63, 62, 62, 0.435);
   align-items: left;
   width: 350px;
   gap: 10px;
@@ -1119,6 +1066,7 @@ body.activeSideCart #nav{
 #counters {
   display: flex;
   flex-direction: row;
+  
   align-self: center;
   gap: 4px;
   color: rgb(16, 16, 16);
@@ -1135,6 +1083,13 @@ body.activeSideCart #nav{
 }
 .tarjeta-cart h4 {
   font-size: 14px;
+  color: rgb(66, 65, 65);
+}
+
+.tarjeta-cart p{
+  font-size: 14px;
+  font-weight: 600;
+  color:  rgb(66, 65, 65);
 }
 
 #close-x{
@@ -1167,12 +1122,16 @@ body.activeSideCart #nav{
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
+  position: absolute;
+  bottom: 0;
   justify-self: center;
   color: black;
   height: 30vh;
   border: solid 1px rgba(113, 113, 113, 0);
-  padding: 8px;
-  background-color: #ffffff9c;
+  padding-left: 0px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  background-color: #fffffffb;
   gap: 2px;
   p {
     font-weight: 600;
@@ -1215,7 +1174,7 @@ body.activeSideCart #nav{
     align-self: center;
     p{
       font-weight: 600;
-      color: black;
+      color: rgb(0, 0, 0);
       background-color: rgba(178, 178, 178, 0.182);
       border-radius: 2px;
       padding: 6px;

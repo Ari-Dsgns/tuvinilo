@@ -21,6 +21,6 @@ window.addEventListener('scroll', function(){
     
 })
 
-// ubiPrincipal:   0    0  se cumple condicion y se oculta nav con top0       50  se sigue cumpliendo condicion    80  no se cumple condicion y se oculta nav con top-100
+// ubiPrincipal:   0    0  se cumple condicion y se oculta nav con top-50       50  se sigue cumpliendo condicion    80  no se cumple condicion y se enseña nav
 // ubiActual :     0   50                                                     80                                   40
 

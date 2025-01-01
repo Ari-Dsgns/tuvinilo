@@ -77,7 +77,7 @@ function crearCardsInicio() {
                   <h6>${vinilo.subtitle}</h6>
                   <p>${vinilo.price}€</p>
                 </div>
-                <button id="add-to-cart">Agregar <i id="bag"class="bi bi-bag"></i></button>
+                <button id="add-to-cart">Agregar <i id="bag"class="bi bi-cart2"></i></button>
             </div>
         
         `;
@@ -177,14 +177,8 @@ function actualizarTotales() {
 function revisarMensajeVacio() {
   const productos = JSON.parse(localStorage.getItem("vinilos")) || [];
 
-  cartVacioElement.classList.toggle(
-    "escondido",
-    productos && productos.length > 0
-  );
-  totalesElement.classList.toggle(
-    "escondido",
-    !(productos && productos.length > 0)
-  );
+  cartVacioElement.classList.toggle("escondido",productos && productos.length > 0);
+  totalesElement.classList.toggle("escondido",!(productos && productos.length >0));
 }
 
 function reiniciarCart() {

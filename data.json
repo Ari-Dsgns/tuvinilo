@@ -156,12 +156,56 @@
 
     {
     
-        "id":1,
+        "id":15,
+        "title":"Sometimes I Might be Introvert",
+        "subtitle":"Little Simz",
+        "price":65.00,
+        "stock":13,
+        "image": "./img/little.jpg"
+
+    },
+
+    {
+    
+        "id":16,
+        "title":"Thriller",
+        "subtitle":"Michael Jackson",
+        "price":45.00,
+        "stock":28,
+        "image": "./img/michael.jpg"
+
+    },
+
+    {
+    
+        "id":17,
         "title":"Nevermind",
         "subtitle":"Nirvana",
-        "price":35.00,
-        "stock":23,
+        "price":37.00,
+        "stock":8,
         "image": "./img/nevermind.jpg"
+
+    },
+
+    {
+    
+        "id":18,
+        "title":"Out of Time",
+        "subtitle":"R.E.M.",
+        "price":66.00,
+        "stock":2,
+        "image": "./img/rem.jpg"
+
+    },
+
+    {
+    
+        "id":19,
+        "title":"Appetite for Destruction",
+        "subtitle":"Guns N'Roses",
+        "price":56.00,
+        "stock":1,
+        "image": "./img/apetitte.jpg"
 
     }
 
